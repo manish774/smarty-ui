@@ -9,7 +9,7 @@
     "registry": "https://npm.pkg.github.com/manish774"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c --bundleConfigAsCjs",
     "rollup": "rollup -c --bundleConfigAsCjs",
     "deploy": "npm version patch && npm run build && npm publish --access public"
   },
