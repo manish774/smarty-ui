@@ -93,6 +93,9 @@ interface InputProps<T> {
     style?: React.CSSProperties;
     className?: string;
     debounceTime?: number;
+    disabled?: boolean;
+    id?: string;
+    key?: string | number;
 }
 
 declare const Input: React$1.ForwardRefExoticComponent<InputProps<string | number> & React$1.RefAttributes<HTMLInputElement>>;

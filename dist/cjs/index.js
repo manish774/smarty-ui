@@ -189,6 +189,7 @@ styleInject(css_248z);
 
 const Input = React.forwardRef((props, ref) => {
     const { onchangeHandler, className, debounceTime = 100 } = props;
+    const { id, key, type, min, max, placeholder, multiple, otherProps, style, disabled, label, labelPosition, } = props || {};
     const [inputValue, setInputValue] = React.useState((props === null || props === void 0 ? void 0 : props.value) || (props === null || props === void 0 ? void 0 : props.min) || undefined);
     const [eventObject, setEventObject] = React.useState();
     const debounceInput = useDebounce(eventObject, debounceTime);
@@ -212,8 +213,8 @@ const Input = React.forwardRef((props, ref) => {
         setInputValue((_b = e === null || e === void 0 ? void 0 : e.target) === null || _b === void 0 ? void 0 : _b.value);
     };
     return (React.createElement(React.Fragment, null,
-        React.createElement("label", { className: `label-${labelPositionClasses[(props === null || props === void 0 ? void 0 : props.labelPosition) || "left"]}` }, props === null || props === void 0 ? void 0 : props.label),
-        React.createElement("input", Object.assign({ ref: ref, type: props === null || props === void 0 ? void 0 : props.type, onChange: changeHandler, value: inputValue, min: props === null || props === void 0 ? void 0 : props.min, max: props === null || props === void 0 ? void 0 : props.max, placeholder: props === null || props === void 0 ? void 0 : props.placeholder, multiple: (props === null || props === void 0 ? void 0 : props.multiple) || false }, props === null || props === void 0 ? void 0 : props.otherProps, { style: props === null || props === void 0 ? void 0 : props.style, className: className }))));
+        React.createElement("label", { className: `label-${labelPositionClasses[labelPosition || "left"]}` }, label),
+        React.createElement("input", Object.assign({ id: id, key: key, ref: ref, type: type, onChange: changeHandler, value: inputValue, min: min, max: max, placeholder: placeholder, multiple: multiple || false }, otherProps, { style: style, className: className, disabled: disabled || false }))));
 });
 
 const TableFooter = ({ rowCount, handleInputChange, totalPage, currentPagination, paginationRequired, changeItemPerPage, paginationOptions, itemPerPage, }) => {
