@@ -1,5 +1,5 @@
 {
-  "version": "1.0.24",
+  "version": "1.0.22",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -9,9 +9,8 @@
     "registry": "https://npm.pkg.github.com/manish774"
   },
   "scripts": {
+    "build": "rollup -c",
     "rollup": "rollup -c --bundleConfigAsCjs",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "deploy": "npm version patch && npm run build && npm publish --access public"
   },
   "author": "",
