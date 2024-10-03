@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "name": "@manish774/smarty-ui",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/manish774"
+    "access": "public"
   },
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs",
